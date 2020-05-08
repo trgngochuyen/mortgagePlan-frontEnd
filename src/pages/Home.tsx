@@ -5,6 +5,7 @@ import { Typography } from '@material-ui/core'
 
 import CalculateForm from '../components/CalculateForm'
 import CustomerTable from '../components/CustomerTable'
+import AppBar from '../components/AppBar'
 import { AppState } from '../types'
 
 const useStyles = makeStyles({
@@ -14,9 +15,16 @@ const useStyles = makeStyles({
     height: '100vh',
     flexDirection: 'column',
     overflowX: 'hidden',
+    position: 'relative'
   },
   center: {
     textAlign: 'center',
+  },
+  content: {
+    position: 'absolute',
+    top: '75px',
+    width: '100%',
+    margin: '0 auto'
   },
 })
 function Home() {
@@ -24,13 +32,14 @@ function Home() {
   const monthlyPayment = useSelector(
     (state: AppState) => state.calculation.result
   )
-  console.log(monthlyPayment)
+
   return (
     <div className={classes.app}>
-      <div style={{ flex: 1 }}>
-        <Typography className={classes.center} variant="h5" color="primary">
+      <AppBar
+        children={<Typography variant="h4">
           Mortgage Plan Calculator
-        </Typography>
+        </Typography>} />
+      <div className={classes.content}>
         <CalculateForm />
         <div className={classes.center} style={{ minHeight: '20vh' }}>
           <Typography color="primary" variant="h1">
@@ -39,9 +48,10 @@ function Home() {
           <Typography color="primary" variant="subtitle1">
             Calculated Monthly Payment
           </Typography>
+          <CustomerTable />
         </div>
+
       </div>
-      <CustomerTable />
     </div>
   )
 }

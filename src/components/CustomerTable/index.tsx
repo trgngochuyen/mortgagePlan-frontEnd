@@ -46,7 +46,7 @@ export default function CustomerTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {all &&
+          {all ?
             all.map((row, index) => (
               <TableRow key={index}>
                 <TableCell component="th" scope="row">
@@ -61,7 +61,8 @@ export default function CustomerTable() {
                   {row.monthlyPayment.toFixed(2).toLocaleString()} €
                 </TableCell>
               </TableRow>
-            ))}
+            )) :
+            <p>No data available</p>}
         </TableBody>
       </Table>
     </TableContainer>
