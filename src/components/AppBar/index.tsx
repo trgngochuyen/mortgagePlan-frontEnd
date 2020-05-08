@@ -7,7 +7,7 @@ export const drawerWidth = 550
 
 const useStyles = makeStyles({
   root: {
-    height: '60px',
+    maxHeight: '10%',
     padding: '10px'
   },
 })

@@ -46,7 +46,7 @@ export default function CustomerTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {all ?
+          {all.length ?
             all.map((row, index) => (
               <TableRow key={index}>
                 <TableCell component="th" scope="row">
