@@ -1,3 +1,16 @@
 # Mortgage Plan Application UI
 
-This project is written using ReactJS, Typescript and Material-UI. It is now deployed to Netifly at [https://mortgageplan-huyentruong.netlify.app/]('https://mortgageplan-huyentruong.netlify.app/)
+## How to start the application on local
+
+Before starting the application, please make sure to have the mortgageplan-backEnd API up and running first.
+
+So after cloning this repository to your local, go ahead and run
+> `yarn`
+
+and then 
+
+> `yarn start`
+
+to open the application.
+
+There you have a simple application to calculate monthly payment for each customer case.
