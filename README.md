@@ -5,9 +5,12 @@
 Before starting the application, please make sure to have the mortgageplan-backEnd API up and running first.
 
 So after cloning this repository to your local, go ahead and run
-> yarn
+> `yarn`
+
 and then 
-> yarn start 
+
+> `yarn start`
+
 to open the application.
 
 There you have a simple application to calculate monthly payment for each customer case.
