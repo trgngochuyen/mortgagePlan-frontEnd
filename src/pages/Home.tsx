@@ -50,7 +50,7 @@ function Home() {
         <div className={classes.table}>
           <div className={classes.center} style={{ minHeight: '20vh' }}>
             <Typography color="primary" variant="h1">
-              {monthlyPayment}€
+              {parseFloat(monthlyPayment.toFixed(2)).toLocaleString()}€
           </Typography>
             <Typography color="primary" variant="subtitle1">
               Calculated Monthly Payment

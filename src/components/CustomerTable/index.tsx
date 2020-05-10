@@ -53,12 +53,12 @@ export default function CustomerTable() {
                   {row.name}
                 </TableCell>
                 <TableCell align="right">
-                  {row.loan.toFixed(2).toLocaleString()} €
+                  {parseFloat(row.loan.toFixed(2)).toLocaleString()} €
                 </TableCell>
                 <TableCell align="right">{row.years}</TableCell>
                 <TableCell align="right">{row.interestRate}%</TableCell>
                 <TableCell align="right">
-                  {row.monthlyPayment.toFixed(2).toLocaleString()} €
+                  {parseFloat(row.monthlyPayment.toFixed(2)).toLocaleString()} €
                 </TableCell>
               </TableRow>
             )) :
