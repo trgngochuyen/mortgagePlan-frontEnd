@@ -27,7 +27,7 @@ export default function CustomerTable() {
   const classes = useStyles()
   const dispatch = useDispatch()
   const { all } = useSelector((state: AppState) => state.customers)
-  console.log(all)
+
   useEffect(() => {
     if (all && !all.length) {
       dispatch(getCustomers())
